@@ -22,6 +22,10 @@ public class EMailServiceImpl implements EMailService {
 	@Autowired
 	private JavaMailSender sender;
 
+	@Override
+	public boolean getStatus(String toAddress){
+		return true;
+	}
 
 	@Override
 	public boolean sendSMTPMail(String toAddress, String subject, String message) {
