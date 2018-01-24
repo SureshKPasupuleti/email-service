@@ -1,3 +1,4 @@
+defaultTasks = ['clean','build']
 buildscript {
 	ext {
 		springBootVersion = '1.5.7.RELEASE'
@@ -14,9 +15,16 @@ apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 
-group = 'com.example'
+
+jar {
+    baseName = 'com.kafka.emailservice'
+    version =  '0.1.0'
+}
+
+group = 'com.kafka.emailservice'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
+
 
 repositories {
 	mavenCentral()
@@ -29,4 +37,7 @@ dependencies {
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	compile "org.springframework.kafka:spring-kafka:1.2.2.RELEASE"
 	compile('org.springframework.boot:spring-boot-starter-mail')
+	compile('org.thymeleaf:thymeleaf-spring4')
+	compile('org.thymeleaf:thymeleaf')
+	compile('nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect')
 }

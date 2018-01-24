@@ -20,6 +20,7 @@ public class ReceiverConfig {
 	@Bean
 	public Map<String,Object> config(){
 		Map<String,Object> conf=new HashMap<>();
+		//conf.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "104.42.108.238:9092");
 		conf.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
 		conf.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
 		conf.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);

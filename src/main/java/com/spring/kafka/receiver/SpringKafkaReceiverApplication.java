@@ -9,4 +9,6 @@ public class SpringKafkaReceiverApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringKafkaReceiverApplication.class, args);
 	}
+
+
 }

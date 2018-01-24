@@ -1,5 +1,29 @@
 server:
   port: 8082
-  
+spring:
+  mail:
+    host: smtp.gmail.com
+    default-encoding: UTF-8
+    username: noreplykafka@gmail.com
+    password: noreply@123
+    port: 587
+    properties:
+            mail:
+              smtp:
+                auth: true
+                starttls:
+                  enable: true
+
+    protocol: smtp
+    test-connection: false
+htmlImage:
+  welcome: nisum_welcome.jpg
+  footer: nisum_hr_footer.png
+emailService:
+  subject: Welcome to Nisum > Initial Joining Docs((Kafka POC Sample Email)
+  htmlEmailTemplate: welcome-employee.html
+  textEmailTemplate: welcome-employee.txt
+
+
   
  
